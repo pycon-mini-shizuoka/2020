@@ -6,7 +6,6 @@ on:
       - master
   workflow_dispatch:
 
-# データの生成
 jobs:
   deploy:
     runs-on: ubuntu-latest
