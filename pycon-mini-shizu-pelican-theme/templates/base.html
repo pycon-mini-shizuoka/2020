@@ -74,13 +74,13 @@
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                   {% for menuname_d1, content_d1 in content %}
-                  <a class="dropdown-item" href="/{{ content_d1 }}">{{ menuname_d1 }}</a>
+                  <a class="dropdown-item" href="{{ SITEURL }}/{{ content_d1 }}">{{ menuname_d1 }}</a>
                   {% endfor %}
                 </div>
               </li>
               {% else %}
                 <li class="active nav-item">
-                  <a class="nav-link js-scroll-trigger"  href="/{{ content }}">{{ menuname }}</a>
+                  <a class="nav-link js-scroll-trigger"  href="{{ SITEURL }}/{{ content }}">{{ menuname }}</a>
                 </li>
               {% endif %}
             {% endfor %}
