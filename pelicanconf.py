@@ -44,10 +44,10 @@ CATEGORY_SAVE_AS = 'category/{slug}/index.html'
 
 # github pages add CNAME
 
-STATIC_PATHS = ['extra/CNAME', 'extra/front_img']
-EXTRA_PATH_METADATA = {'extra/CNAME': {'path': 'CNAME'},
-                       'extra/front_img': {'path': './front_img/'},
+STATIC_PATHS = ['extra/front_img']
+EXTRA_PATH_METADATA = {'extra/front_img': {'path': './front_img/'},
 }
+
 
 # =====[テーマ専用の設定をロード]=====
 
