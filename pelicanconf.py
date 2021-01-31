@@ -69,18 +69,18 @@ KYOSAN_INFO = "主催: PyCon mini Shizuoka 実行委員会 <br> 共催:藤枝ICT
 
 # フロントページの移動用にidリンクをメニューに載せる
 NAVMENU = (
-    ("2020オンライン特設", "./2020_online/"),
-    ("重要なお知らせ", "./important_notices/"),
+    ("2020オンライン特設", "2020_online/"),
+    ("重要なお知らせ", "important_notices/"),
     ("イベント情報", (
-        ("キーノート", "./#keynote"),
-        ("招待スピーカー", "./#guest_session"),
-        ("セッション一覧", "./category/session/"),
-        ("タイムテーブル", "./timetable/"),
+        ("キーノート", "#keynote"),
+        ("招待スピーカー", "#guest_session"),
+        ("セッション一覧", "category/session/"),
+        ("タイムテーブル", "timetable/"),
     )),
-    ("会場","./#access"),
-    # ("スポンサー", "./sponsor/"),
-    ("スタッフ", "./staff/"),
-    ("行動規範", "./code-of-conduct/")
+    ("会場","#access"),
+    # ("スポンサー", "sponsor/"),
+    ("スタッフ", "staff/"),
+    ("行動規範", "code-of-conduct/")
 )
 
 # カテゴリ名称のslugを置き換えする
