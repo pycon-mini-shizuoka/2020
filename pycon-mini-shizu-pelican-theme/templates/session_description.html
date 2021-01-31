@@ -1,0 +1,52 @@
+<section id="content" class="page-section">
+  <article>
+    <div class="container">
+      <h1 class="page-description">セッション詳細</h1>
+      <div class="session-body">
+        <header>
+          <h1 class="session-title">{{ article.title }}</h1>
+        </header>
+        <div class="row">
+          <div class="col-md-4">
+            {% if article.speaker_name %}
+            <address class="speaker-name">
+              <p>
+                By: {{article.speaker_name}}
+              </p>
+            </address>
+            {% endif %}
+            <div class="speaker-info">
+              <p class="speaker-self_intro">{% if article.self_intro %}
+                {{ article.self_intro }}
+              {% endif %}
+              </p>
+              
+              <div class="speaker-network">
+                <!-- twitter icon -->
+                {% if article.twittername %}
+                <a class="session-icon-link" href="https://twitter.com/{{ article.twittername }}"><i class="fab fa-twitter"></i></a> 
+                {% endif %}
+
+                <!-- github icon -->
+                {% if article.githubname %}
+                <a class="session-icon-link" href="https://github.com/{{ article.githubname }}"><i class="fab fa-github"></i></a> 
+                {% endif %}
+
+                <!-- website -->
+                {% if article.website %}
+                <a class="session-icon-link" href="{{article.website}}"><i class="fas fa-home"></i></a> 
+                {% endif %}
+              </div>
+            </div>
+            {% include 'session_attr.html' %}
+          </div>
+          <div class="col-md-8">
+            <div class="session-content">
+              {{ article.content }}
+            </div><!-- /.session-content -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+</section>

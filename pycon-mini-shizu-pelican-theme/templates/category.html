@@ -1,0 +1,17 @@
+
+{% if category=="session" %}
+  {% extends "sessions.html" %}
+{% else %}
+  {% extends "index.html" %}
+{% endif %}
+
+{% block header %}
+<!-- カテゴリページ（ニュースとかセッション名とか）向けの細いヘッダを用意（しないとbootstrapのナビゲーションが機能しない） -->
+<header class="other">
+    <div class="container">
+      <div class="intro-text">
+      </div>
+    </div>
+  </header>
+{% endblock %}
+

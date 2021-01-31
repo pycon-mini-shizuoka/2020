@@ -1,0 +1,82 @@
+<div class="row">
+  <div class="col-md-2"></div>
+  <div class="col-md-8">
+    {% import 'translations.html' as translations with context %}
+    {{ translations.translations_for(page) }}
+    {{ page.content }}
+  </div>
+  <div class="col-md-2"></div>
+</div>
+
+<!-- sectionの構造をここで一時的に区切る -->
+</div>
+</section>
+
+<!-- キーノート, 招待スピーカー -->
+<section class="page-section" id="keynote">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-2"></div>
+      <div class="col-lg-8 text-center">
+        <h2 class="section-heading text-uppercase">キーノートスピーカー</h2>
+        <h3>{{ KEYNOTE_INFO.theme }}</h3>
+        <p><img src="{{ KEYNOTE_INFO.iconfilepath }}" alt="からあげさんSNSアイコン" width=240px></p>
+        <h3>{{ KEYNOTE_INFO.name }}</h3>
+        <p>
+          {% if KEYNOTE_INFO.twittername %}
+          <a href="https://twitter.com/{{ KEYNOTE_INFO.twittername }}"><i class="fab fa-twitter"></i></a>
+          {% endif %}
+          {% if KEYNOTE_INFO.siteurl %}
+          <a href="{{ KEYNOTE_INFO.siteurl }}"> <i class="fas fa-home"></i></a>
+          {% endif %}
+        </p>
+        <p>{{ KEYNOTE_INFO.description }}</p>
+      </div>
+      <div class="col-lg-2"></div>
+    </div>
+  </div>
+</section>
+
+<section class="page-section" id="guest_session">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-2"></div>
+      <div class="col-lg-8 text-center">
+        <h2 class="section-heading text-uppercase">招待スピーカー</h2>
+        <h3>{{ GUEST_SESSION_INFO.theme }}</h3>
+        <p><img src="{{ GUEST_SESSION_INFO.iconfilepath }}" alt="{{ GUEST_SESSION_INFO.name }}アイコン" width=240px></p>
+        <h3>{{ GUEST_SESSION_INFO.name }}</h3>
+        <p>
+          {% if GUEST_SESSION_INFO.twittername %}
+          <a href="https://twitter.com/{{ GUEST_SESSION_INFO.twittername }}"><i class="fab fa-twitter"></i></a>
+          {% endif %}
+          {% if GUEST_SESSION_INFO.siteurl %}
+          <a href="{{ GUEST_SESSION_INFO.siteurl }}"> <i class="fas fa-home"></i></a>
+          {% endif %}
+        </p>
+        <p>{{ GUEST_SESSION_INFO.description }}</p>
+      </div>
+      <div class="col-lg-2"></div>
+    </div>
+  </div>
+</section>
+
+<!-- アクセス先 -->
+<section class="page-section access" id="access">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h2 class="section-heading text-uppercase">会場へのアクセス</h2>
+        <p>会場名：<a href="https://www.bivicam.jp/">BiViキャン</a></p>
+        <p>藤枝市産学官連携推進センター（静岡産業大学藤枝駅前キャンパス）</p>
+        <p>住所：〒426-0067 静岡県藤枝市前島1丁目7-10</p>
+        <div class="map-container">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3274.345307477248!2d138.25092235068612!3d34.84754988030074!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601a4ff66abde9e9%3A0x88cc08ca472a98d4!2z6Jek5p6d5biC55Sj5a2m5a6Y6YCj5pC65o6o6YCy44K744Oz44K_44O8!5e0!3m2!1sja!2sjp!4v1572694624561!5m2!1sja!2sjp"
+            width="320" height="360" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+        </div>
+      </div>
+    </div>
+    <!-- page.htmlテンプレートの最後にあるセクションの区切りを利用するのでここは消す -->
+    <!-- </div>
+    </section> -->

@@ -1,0 +1,94 @@
+{% extends "base.html" %}
+{% block html_lang %}{{ page.lang }}{% endblock %}
+{% block title %}
+
+{% if page.slug!="front" %}
+  {{ SITENAME }} - {{ page.title }}
+{% else %}
+  {{ SITENAME }}
+{% endif %}
+{% endblock %}
+
+{% block extra_head %}
+{% import 'translations.html' as translations with context %}
+{% if translations.entry_hreflang(page) %}
+  {{ translations.entry_hreflang(page) }}
+{% endif %}
+{% endblock %}
+
+{% block header %}
+
+<!-- トップページ用のヘッダ -->
+{% if page.slug=="front" %}
+<header class="masthead">
+  <div class="container">
+    <div class="intro-text">
+      <div class="intro-heading">{{ SITENAME }}</div>
+      <div class="intro-lead-in">{{ EVENT_FORNT_SUMMARY }}</div>
+      {% if TWITTER_HASHTAG_URL %}
+      <p>ハッシュタグ <a class="badge badge-info hashtag-link" href="{{ TWITTER_HASHTAG_URL }}">#pycon_shizu</a></p>
+      {% endif %}
+      {% if CFP_FROM_BOTTON_TEXT %}
+      <a class="btn btn-primary btn-lg text-uppercase js-scroll-trigger" href="/{{ CFP_FORM_URL }}">{{ CFP_FROM_BOTTON_TEXT }}</a>
+      {% endif %}
+      {% if CONNPASS_URL %}
+      <a class="btn btn-primary text-uppercase js-scroll-trigger" href="{{ CONNPASS_URL }}">イベント申し込みはこちら
+      </a>
+      {% endif %}
+    </div>
+    {% if KYOSAN_INFO %}
+    <div class="kyosan"><p>{{ KYOSAN_INFO }}</p></div>
+    {% endif %}
+  </div>
+</header>
+
+{% else %}
+
+<!-- カテゴリページ（ニュースとかセッション名とか）向けの細いヘッダを用意（しないとbootstrapのナビゲーションが機能しない） -->
+<header class="other">
+  <div class="container">
+    <div class="intro-text">
+    </div>
+  </div>
+</header>
+{% endif %}
+
+{% endblock %}
+
+{% block content %}
+
+<section id="content" class="body  page-section">
+  <div class="container">
+
+    {% if page.slug!="front" %}
+    <!-- ページがindexの時はタイトルを消す -->
+    <h1 class="page-description">{{ page.title }}</h1>
+    {% endif %}
+    
+    {% if page.slug=="front" %}
+    <!-- フロントページ -->
+      {% include "front.html" %}
+    {% elif page.slug == "timetable" %}
+    <!-- タイムテーブル用 -->
+      {% include "timetable.html" %}
+    {% elif page.slug == "sponsor" %}
+      <!-- スタッフ用 -->
+        {% include "sponsor.html" %}
+    {% elif page.slug == "staff" %}
+    <!-- スタッフ用 -->
+      {% include "staff.html" %}
+    {% else %}
+    <!-- その他のページ -->
+    <div class="row">
+      <div class="col-md-2"></div>
+      <div class="col-md-8">
+          {% import 'translations.html' as translations with context %}
+          {{ translations.translations_for(page) }}
+          {{ page.content }}
+      </div>
+      <div class="col-md-2"></div>
+    </div>
+    {% endif %}
+  </div>
+</section>
+{% endblock %}

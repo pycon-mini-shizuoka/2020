@@ -1,0 +1,43 @@
+  <!-- スポンサー -->
+  <section class="page-section sponsor" id="sponsor"">
+          <div class=" container">
+    {% if SPONSORS %}
+    <!-- 企業 -->
+    <h2 class="section-heading text-uppercase">企業スポンサー</h2>
+    <div class="row">
+      {% for sponsor in SPONSORS %}
+      <div class="col-md-4">
+        <div class="infocard">
+        <img class="sponsor-logo"" src="/{{ sponsor.logo_path }}" alt="{{ sponsor.copname }}">
+        <a href="{{ sponsor.siteurl }}"><h4 class="sponsor-name">{{ sponsor.corpname }}</h4></a>
+        <p class="sponsor-description">{{ sponsor.description }} </p>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    {% endif %}
+    {% if PATRONS %}
+    <!-- パトロン -->
+    <h2 class="section-heading text-uppercase">パトロン</h2>
+    <div class="row">
+      {% for patron in PATRONS %}
+      <div class="col-md-4">
+        <div class="infocard">
+          <img class="sponsor-logo"" src="/{{ patron.logo_path }}" alt="{{ patron.name }}">
+          <p class="sponsor-name">{{ patron.name }}</p>
+          <p>
+            {% if patron.twittername %}
+            <a href="https://twitter.com/{{ patron.twittername }}"><i class="fab fa-twitter"></i></a>
+            {% endif %}
+            {% if patron.siteurl %}
+            <a href="{{ patron.siteurl }}"> <i class="fas fa-home"></i></a>
+            {% endif %}
+          </p>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    {% endif %}
+    <!-- page.htmlテンプレートの最後にあるセクションの区切りを利用するのでここは消す -->
+    <!-- </div>
+    </section> -->

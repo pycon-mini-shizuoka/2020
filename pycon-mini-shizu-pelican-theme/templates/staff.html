@@ -1,0 +1,27 @@
+
+    <div class="row">
+
+        <!-- スタッフのアイコンをmdで4つ並べる -->
+        {% for staff in STAFF_INFOS %}
+        <div class="col-md-4 ">
+            <div class="infocard">
+            <p class="staff-name">{{ staff.name }} </p>
+            {% if staff.twittername %}
+            <a href="https://twitter.com/{{ staff.twittername }}"><i class="fab fa-twitter"></i></a>
+            {% endif %}
+            {% if staff.siteurl %}
+            <a href="{{ staff.siteurl }}"> <i class="fas fa-home"></i></a>
+            {% endif %}
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            {% import 'translations.html' as translations with context %}
+            {{ translations.translations_for(page) }}
+            {{ page.content }}
+        </div>
+        <div class="col-md-2"></div>
+    </div>

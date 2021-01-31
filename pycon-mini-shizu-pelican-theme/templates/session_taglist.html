@@ -1,0 +1,8 @@
+
+{% if article.tags %}
+<p class="session-tags"> 
+    {% for tag in article.tags %}
+    <a class="btn btn-outline-info" href="{{ SITEURL }}/{{ tag.url }}">{{ tag | escape }}</a> 
+    {% endfor %}
+</p>
+{% endif %}

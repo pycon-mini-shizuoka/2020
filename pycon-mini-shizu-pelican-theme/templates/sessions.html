@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+
+{% block title %}
+{{ SITENAME }} - 
+
+{%if CATEGORY_SLUG_EXCHANGE[category] is defined %}
+    {{ CATEGORY_SLUG_EXCHANGE[category] }}
+{% else %}
+    {{ category }} 
+{% endif %}
+
+{% endblock %}
+
+{% block content_title %}{% endblock %}
+
+{% block content %}
+
+<!-- カテゴリ用の一覧生成 -->
+
+<section id="content" class="body page-section">
+    <div class="container">
+        <!-- カテゴリの文字の置き換え -->
+        <h1 class="page-description">
+            {%if CATEGORY_SLUG_EXCHANGE[category] is defined %}
+                {{ CATEGORY_SLUG_EXCHANGE[category] }}
+            {% else %}
+                {{ category }}
+            {% endif %}
+        </h1>
+    {% if articles %}
+    <div class="session-list">
+    {% for article in articles_page.object_list %}
+
+    <article class="session">
+        <header>
+            <h1 class="session-title"><a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark"
+                    title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a></h1>
+        </header>
+
+        <div class="entry-content">
+
+        <footer class="session-info">
+    
+            {% if article.speaker_name %}
+            <address class="speacker">
+                <p>スピーカー: {{article.speaker_name}}</p>
+            </address>
+            {% endif %}
+
+            {% include 'session_attr.html' %}
+    </footer>
+    
+    </div>
+    </article>
+
+    {% endfor %}
+    </div>
+    </section>
+</div>
+{% else %}
+
+{% endif %}
+{% endblock content %}

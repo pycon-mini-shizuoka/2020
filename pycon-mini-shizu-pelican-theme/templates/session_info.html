@@ -1,0 +1,14 @@
+<footer class="session-info">
+
+        {% if article.authors %}
+        <address class="speacker">
+                スピーカー:
+                {% for author in article.authors %}
+                        <a class="url fn" href="{{ SITEURL }}/{{ author.url }}">{{ author }}</a>
+                {% endfor %}
+        </address>
+        {% endif %}
+
+{% include 'session_taglist.html' %}
+
+</footer><!-- /.post-info -->

@@ -1,0 +1,58 @@
+
+    <!-- タイムテーブル用の構造 -->
+
+    <div class="row timetable">
+      <div class="col-md-2 timetable-header time-col d-none d-md-block">
+        <p>時間</p>
+      </div>
+      {% if TIMETABLE_COLUMHEADER %}
+      {% for header in TIMETABLE_COLUMHEADER %}
+      <div class="col-md-{% for room in TIMETABLE_ROOMS if room.name==header %}{{room.len}}{% endfor %}
+         timetable-header time-col d-none d-md-block">
+        <p>{% for room in TIMETABLE_ROOMS if room.name==header %}{{room.name}}{% endfor %} </p> 
+      </div>
+      {% endfor %}
+      {% endif %}
+
+      {% if TIMETABLE_MAP %}
+      {% for row in TIMETABLE_MAP %}
+
+      <div class="col-md-2 time-col">
+        <p>{{ row.time }}</p>
+      </div>
+        {% for session in row.sessions %}
+        
+        <div class="col-md-{% for room in TIMETABLE_ROOMS if room.name==session.room %}{{room.len}}{% endfor %}">
+          <p class="d-sm-block d-md-none floorname-inline">
+            <span class="badge room-badge">{{ session.room }}</span></p>
+        {% if session.session_number %}
+          <!-- セッション番号を元に情報を呼びだす -->
+
+          {% for category, articles in categories %}
+            {% for article in articles %}
+            {% if session.session_number==article.session_number %}
+              <p class="session-title"><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></p>
+              <p class="session-speaker">{{ article.speaker_name }}</p>
+              <p>
+                <span class="attr-badge badge badge-info">レベル:{{article.level}}</span>
+                <span class="attr-badge badge badge-info">カテゴリ:{{article.session_category}}</span>
+              </p>
+            {% endif %}
+            {% endfor %}
+          {% endfor %}
+
+        {% else %}
+        <p class="session-title">{% if session.title %}{{ session.title }}{% endif %}</p>
+        <p class="session-theme">{% if session.theme %}{{ session.theme }}{% endif %}</p>
+        <p class="session-speaker">{% if session.speaker_name %}{{ session.speaker_name }}{% endif %}</p>
+        <p class="session-description">{% if session.description %}{{ session.description }}{% endif %}</p>
+        {% endif %}
+        </div>
+        {% endfor %}
+      {% endfor %}
+      {% endif %}
+
+      <div class="col-md-12 d-none">
+        {{ page.content }}
+      </div>
+    </div>
