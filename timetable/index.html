@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- OGP -->
+  
+
+  <title>
+  PyCon mini Shizuoka - タイムテーブル
+</title>
+
+  <link rel="stylesheet" href="/theme/css/main.css" />
+
+  <!-- Bootstrap core CSS -->
+  <link href="/theme/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- todo: add ud font? -->
+
+  <!-- Custom fonts for this template -->
+  <link href="/theme/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet'
+    type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+
+  <!-- Custom styles for this template -->
+  <link href="/theme/css_mod/agency.css" rel="stylesheet">
+
+  <!-- using maru gotic -->
+  <link href="https://fonts.googleapis.com/css?family=Kosugi+Maru&display=swap" rel="stylesheet">
+
+  <link href="/theme/css_mod/pycon-mini-shizu-main.css" rel="stylesheet">
+
+  <link
+    href="/feeds/all.atom.xml"
+    type="application/atom+xml" rel="alternate" title="PyCon mini Shizuoka Atom Feed" />
+</head>
+
+<body id="page-top">
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll-trigger" href="/#page-top">PyCon mini Shizuoka
+</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+        data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+        aria-label="Toggle navigation">
+        Menu
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+      
+        <ul class="navbar-nav text-uppercase ml-auto">
+
+                <li class="active nav-item">
+                  <a class="nav-link js-scroll-trigger"  href="/2020_online/">2020オンライン特設</a>
+                </li>
+
+                <li class="active nav-item">
+                  <a class="nav-link js-scroll-trigger"  href="/important_notices/">重要なお知らせ</a>
+                </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  イベント情報
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="/#keynote">キーノート</a>
+                  <a class="dropdown-item" href="/#guest_session">招待スピーカー</a>
+                  <a class="dropdown-item" href="/category/session/">セッション一覧</a>
+                  <a class="dropdown-item" href="/timetable/">タイムテーブル</a>
+                </div>
+              </li>
+
+                <li class="active nav-item">
+                  <a class="nav-link js-scroll-trigger"  href="/#access">会場</a>
+                </li>
+
+                <li class="active nav-item">
+                  <a class="nav-link js-scroll-trigger"  href="/staff/">スタッフ</a>
+                </li>
+
+                <li class="active nav-item">
+                  <a class="nav-link js-scroll-trigger"  href="/code-of-conduct/">行動規範</a>
+                </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header -->
+
+<!-- トップページ用のヘッダ -->
+
+<!-- カテゴリページ（ニュースとかセッション名とか）向けの細いヘッダを用意（しないとbootstrapのナビゲーションが機能しない） -->
+<header class="other">
+  <div class="container">
+    <div class="intro-text">
+    </div>
+  </div>
+</header>
+
+
+
+<section id="content" class="body  page-section">
+  <div class="container">
+
+    <!-- ページがindexの時はタイトルを消す -->
+    <h1 class="page-description">タイムテーブル</h1>
+    
+    <!-- タイムテーブル用 -->
+
+    <!-- タイムテーブル用の構造 -->
+
+    <div class="row timetable">
+      <div class="col-md-2 timetable-header time-col d-none d-md-block">
+        <p>時間</p>
+      </div>
+      <div class="col-md-5         timetable-header time-col d-none d-md-block">
+        <p>講義室B(左) </p> 
+      </div>
+      <div class="col-md-5         timetable-header time-col d-none d-md-block">
+        <p>講義室A(右) </p> 
+      </div>
+
+
+      <div class="col-md-2 time-col">
+        <p>9:30〜9:50</p>
+      </div>
+        
+        <div class="col-md-5">
+          <p class="d-sm-block d-md-none floorname-inline">
+            <span class="badge room-badge">講義室B(左)</span></p>
+        <p class="session-title">受付</p>
+        <p class="session-theme"></p>
+        <p class="session-speaker"></p>
+        <p class="session-description"></p>
+        </div>
+        
+        <div class="col-md-5">
+          <p class="d-sm-block d-md-none floorname-inline">
+            <span class="badge room-badge">講義室A(右)</span></p>
+        <p class="session-title"></p>
+        <p class="session-theme"></p>
+        <p class="session-speaker"></p>
+        <p class="session-description"></p>
+        </div>
+
+      <div class="col-md-2 time-col">
+        <p>9:50〜10:00</p>
+      </div>
+        
+        <div class="col-md-10">
+          <p class="d-sm-block d-md-none floorname-inline">
+            <span class="badge room-badge">部屋全体</span></p>
+        <p class="session-title">オープニング</p>
+        <p class="session-theme"></p>
+        <p class="session-speaker"></p>
+        <p class="session-description"></p>
+        </div>
+
+      <div class="col-md-2 time-col">
+        <p>10:00〜10:45</p>
+      </div>
+        
+        <div class="col-md-10">
+          <p class="d-sm-block d-md-none floorname-inline">
+            <span class="badge room-badge">部屋全体</span></p>
+        <p class="session-title">キーノート</p>
+        <p class="session-theme">「ラズベリーパイの"パイ"とはなんのことだ」</p>
+        <p class="session-speaker">からあげ</p>
+        <p class="session-description"></p>
+        </div>
+
+      <div class="col-md-2 time-col">
+        <p>10:55〜11:40</p>
+      </div>
+        
+        <div class="col-md-10">
+          <p class="d-sm-block d-md-none floorname-inline">
+            <span class="badge room-badge">部屋全体</span></p>
+        <p class="session-title">招待セッション</p>
+        <p class="session-theme">「いま、なぜPythonなのか？」<br>〜AI研究者（Python初心者）の視点から〜</p>
+        <p class="session-speaker">静岡産業大学情報学部教授 佐野典秀</p>
+        <p class="session-description"></p>
+        </div>
+
+      <div class="col-md-2 time-col">
+        <p>12:00〜13:00</p>
+      </div>
+        
+        <div class="col-md-10">
+          <p class="d-sm-block d-md-none floorname-inline">
+            <span class="badge room-badge">部屋全体</span></p>
+        <p class="session-title">昼食</p>
+        <p class="session-theme"></p>
+        <p class="session-speaker"></p>
+        <p class="session-description"></p>
+        </div>
+
+      <div class="col-md-2 time-col">
+        <p>13:15〜13:45</p>
+      </div>
+        
+        <div class="col-md-5">
+          <p class="d-sm-block d-md-none floorname-inline">
+            <span class="badge room-badge">講義室B(左)</span></p>
+          <!-- セッション番号を元に情報を呼びだす -->
+
+              <p class="session-title"><a href="/session/masahito/">DataFlow + Pythonで大規模データ処理</a></p>
+              <p class="session-speaker">masahito</p>
+              <p>
+                <span class="attr-badge badge badge-info">レベル:All: エンジニア以外も対象</span>
+                <span class="attr-badge badge badge-info">カテゴリ:データ基盤</span>
+              </p>
+
+        </div>
+        
+        <div class="col-md-5">
+          <p class="d-sm-block d-md-none floorname-inline">
+            <span class="badge room-badge">講義室A(右)</span></p>
+          <!-- セッション番号を元に情報を呼びだす -->
+
+              <p class="session-title"><a href="/session/etcinitd/">PythonとRaspberry Piで現場カイゼン！</a></p>
+              <p class="session-speaker">Yasuhiro Miyake</p>
+              <p>
+                <span class="attr-badge badge badge-info">レベル:All: エンジニア以外も対象</span>
+                <span class="attr-badge badge badge-info">カテゴリ:IoT、ものづくり</span>
+              </p>
+
+        </div>
+
+      <div class="col-md-2 time-col">
+        <p>13:55〜14:25</p>
+      </div>
+        
+        <div class="col-md-5">
+          <p class="d-sm-block d-md-none floorname-inline">
+            <span class="badge room-badge">講義室B(左)</span></p>
+          <!-- セッション番号を元に情報を呼びだす -->
+
+              <p class="session-title"><a href="/session/ftnext/">Djangoで始めるWeb開発の世界 〜Web開発を知らない方に贈る、Django Girls Tutorialとその周辺のクイックツアー〜</a></p>
+              <p class="session-speaker">nikkie</p>
+              <p>
+                <span class="attr-badge badge badge-info">レベル:All: エンジニア以外も対象</span>
+                <span class="attr-badge badge badge-info">カテゴリ:WEB系</span>
+              </p>
+
+        </div>
+        
+        <div class="col-md-5">
+          <p class="d-sm-block d-md-none floorname-inline">
+            <span class="badge room-badge">講義室A(右)</span></p>
+          <!-- セッション番号を元に情報を呼びだす -->
+
+              <p class="session-title"><a href="/session/cardinalxaro/">君はcmathを知っているか</a></p>
+              <p class="session-speaker">Hayao Suzuki</p>
+              <p>
+                <span class="attr-badge badge badge-info">レベル:All: エンジニア以外も対象</span>
+                <span class="attr-badge badge badge-info">カテゴリ:科学技術計算</span>
+              </p>
+
+        </div>
+
+      <div class="col-md-2 time-col">
+        <p>14:35〜15:05</p>
+      </div>
+        
+        <div class="col-md-5">
+          <p class="d-sm-block d-md-none floorname-inline">
+            <span class="badge room-badge">講義室B(左)</span></p>
+          <!-- セッション番号を元に情報を呼びだす -->
+
+              <p class="session-title"><a href="/session/saito/">RaspberryPiとawsで取り組んだ自作IoT</a></p>
+              <p class="session-speaker">Saito</p>
+              <p>
+                <span class="attr-badge badge badge-info">レベル:All: エンジニア以外も対象</span>
+                <span class="attr-badge badge badge-info">カテゴリ:IoT、ものづくり</span>
+              </p>
+
+        </div>
+        
+        <div class="col-md-5">
+          <p class="d-sm-block d-md-none floorname-inline">
+            <span class="badge room-badge">講義室A(右)</span></p>
+          <!-- セッション番号を元に情報を呼びだす -->
+
+              <p class="session-title"><a href="/session/nyo3q1/">WagtailとPelicanでJAMstack環境を作ってみた</a></p>
+              <p class="session-speaker">Makoto Mochizuki</p>
+              <p>
+                <span class="attr-badge badge badge-info">レベル:Basic: 初学者向け</span>
+                <span class="attr-badge badge badge-info">カテゴリ:WEB系</span>
+              </p>
+
+        </div>
+
+      <div class="col-md-2 time-col">
+        <p>15:05～15:25</p>
+      </div>
+        
+        <div class="col-md-10">
+          <p class="d-sm-block d-md-none floorname-inline">
+            <span class="badge room-badge">部屋全体</span></p>
+        <p class="session-title">おやつ休憩</p>
+        <p class="session-theme"></p>
+        <p class="session-speaker"></p>
+        <p class="session-description"></p>
+        </div>
+
+      <div class="col-md-2 time-col">
+        <p>15:25〜15:55</p>
+      </div>
+        
+        <div class="col-md-5">
+          <p class="d-sm-block d-md-none floorname-inline">
+            <span class="badge room-badge">講義室B(左)</span></p>
+          <!-- セッション番号を元に情報を呼びだす -->
+
+              <p class="session-title"><a href="/session/mizzsugar0425/">unittest.mockを使ってテストを書こう 〜モックオブジェクトを使ってより単体テストの目的に沿ったテストに〜</a></p>
+              <p class="session-speaker">みずき</p>
+              <p>
+                <span class="attr-badge badge badge-info">レベル:Advanced: 経験者向け</span>
+                <span class="attr-badge badge badge-info">カテゴリ:プログラミングノウハウ</span>
+              </p>
+
+        </div>
+        
+        <div class="col-md-5">
+          <p class="d-sm-block d-md-none floorname-inline">
+            <span class="badge room-badge">講義室A(右)</span></p>
+          <!-- セッション番号を元に情報を呼びだす -->
+
+              <p class="session-title"><a href="/session/kzhttkhs/">EeLとWebSlidesで一味違う画像処理のプレゼン</a></p>
+              <p class="session-speaker">高橋かずひと</p>
+              <p>
+                <span class="attr-badge badge badge-info">レベル:All: エンジニア以外も対象</span>
+                <span class="attr-badge badge badge-info">カテゴリ:プレゼンテーション</span>
+              </p>
+
+        </div>
+
+      <div class="col-md-2 time-col">
+        <p>16:05〜16:35</p>
+      </div>
+        
+        <div class="col-md-5">
+          <p class="d-sm-block d-md-none floorname-inline">
+            <span class="badge room-badge">講義室B(左)</span></p>
+          <!-- セッション番号を元に情報を呼びだす -->
+
+              <p class="session-title"><a href="/session/dario_okazaki/">Pythonでデスクトップアプリを簡単に作る方法</a></p>
+              <p class="session-speaker">岡崎潤</p>
+              <p>
+                <span class="attr-badge badge badge-info">レベル:Basic: 初学者向け</span>
+                <span class="attr-badge badge badge-info">カテゴリ:デスクトップアプリ</span>
+              </p>
+
+        </div>
+        
+        <div class="col-md-5">
+          <p class="d-sm-block d-md-none floorname-inline">
+            <span class="badge room-badge">講義室A(右)</span></p>
+          <!-- セッション番号を元に情報を呼びだす -->
+
+              <p class="session-title"><a href="/session/ike_jpn/">TensorFlow Liteを使った組み込みディープラーニング開発</a></p>
+              <p class="session-speaker">小池　誠</p>
+              <p>
+                <span class="attr-badge badge badge-info">レベル:All: エンジニア以外も対象</span>
+                <span class="attr-badge badge badge-info">カテゴリ:機械学習、ディープラーニング</span>
+              </p>
+
+        </div>
+
+      <div class="col-md-2 time-col">
+        <p>16:45〜17:15</p>
+      </div>
+        
+        <div class="col-md-5">
+          <p class="d-sm-block d-md-none floorname-inline">
+            <span class="badge room-badge">講義室B(左)</span></p>
+          <!-- セッション番号を元に情報を呼びだす -->
+
+              <p class="session-title"><a href="/session/fmkz___/">PythonとKNIMEではじめるデータサイエンス</a></p>
+              <p class="session-speaker">kzfm</p>
+              <p>
+                <span class="attr-badge badge badge-info">レベル:All: エンジニア以外も対象</span>
+                <span class="attr-badge badge badge-info">カテゴリ:機械学習、ディープラーニング</span>
+              </p>
+
+        </div>
+        
+        <div class="col-md-5">
+          <p class="d-sm-block d-md-none floorname-inline">
+            <span class="badge room-badge">講義室A(右)</span></p>
+          <!-- セッション番号を元に情報を呼びだす -->
+
+              <p class="session-title"><a href="/session/rhoboro/">自信を持ってコードを書こう 〜「とりあえず動かす」の一歩先へ〜</a></p>
+              <p class="session-speaker">rhoboro</p>
+              <p>
+                <span class="attr-badge badge badge-info">レベル:Basic: 初学者向け</span>
+                <span class="attr-badge badge badge-info">カテゴリ:プログラミングノウハウ</span>
+              </p>
+
+        </div>
+
+      <div class="col-md-2 time-col">
+        <p>17:30〜17:50</p>
+      </div>
+        
+        <div class="col-md-5">
+          <p class="d-sm-block d-md-none floorname-inline">
+            <span class="badge room-badge">講義室B(左)</span></p>
+        <p class="session-title">LT大会</p>
+        <p class="session-theme"></p>
+        <p class="session-speaker"></p>
+        <p class="session-description"></p>
+        </div>
+        
+        <div class="col-md-5">
+          <p class="d-sm-block d-md-none floorname-inline">
+            <span class="badge room-badge">講義室A(右)</span></p>
+        <p class="session-title">懇親会準備</p>
+        <p class="session-theme"></p>
+        <p class="session-speaker"></p>
+        <p class="session-description"></p>
+        </div>
+
+      <div class="col-md-2 time-col">
+        <p>17:50〜18:00</p>
+      </div>
+        
+        <div class="col-md-5">
+          <p class="d-sm-block d-md-none floorname-inline">
+            <span class="badge room-badge">講義室B(左)</span></p>
+        <p class="session-title">クロージング</p>
+        <p class="session-theme"></p>
+        <p class="session-speaker"></p>
+        <p class="session-description"></p>
+        </div>
+        
+        <div class="col-md-5">
+          <p class="d-sm-block d-md-none floorname-inline">
+            <span class="badge room-badge">講義室A(右)</span></p>
+        <p class="session-title">懇親会準備</p>
+        <p class="session-theme"></p>
+        <p class="session-speaker"></p>
+        <p class="session-description"></p>
+        </div>
+
+      <div class="col-md-2 time-col">
+        <p>18:00〜19:30</p>
+      </div>
+        
+        <div class="col-md-10">
+          <p class="d-sm-block d-md-none floorname-inline">
+            <span class="badge room-badge">部屋全体</span></p>
+        <p class="session-title">懇親会 + LT大会</p>
+        <p class="session-theme"></p>
+        <p class="session-speaker"></p>
+        <p class="session-description"></p>
+        </div>
+
+      <div class="col-md-12 d-none">
+        
+      </div>
+    </div>  </div>
+</section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-3">
+        </div>
+        <div class="col-md-6">
+          <span class="copyright">Copyright &copy; PyCon mini Shizuoka 実行委員会</span>
+          <p>お問合せ先: shizuoka at pycon.jp <br>(atをアットマークに変更してメールアドレスとして利用ください）</p>
+        </div>
+        <div class="col-md-3">
+          <ul class="list-inline quicklinks">
+            <li class="list-inline-item">
+              Powered by <a href="http://getpelican.com/">Pelican</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="/theme/vendor/jquery/jquery.min.js"></script>
+  <script src="/theme/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="/theme/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Contact form JavaScript -->
+  <script src="/theme/js/jqBootstrapValidation.js"></script>
+  <script src="/theme/js/contact_me.js"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="/theme/js/agency.min.js"></script>
+
+</body>
+
+</html>
