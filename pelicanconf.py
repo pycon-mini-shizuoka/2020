@@ -3,8 +3,8 @@
 from __future__ import unicode_literals
 
 
-AUTHOR = 'pycon-mini-shizuoka'
-SITENAME = 'PyCon mini Shizuoka'
+AUTHOR = 'pycon-mini-shizuoka 2020'
+SITENAME = 'PyCon mini Shizuoka 2020'
 SITEURL = ''
 
 PATH = 'content'
